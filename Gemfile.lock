@@ -83,7 +83,8 @@ GEM
     date (3.3.3)
     debug_inspector (1.1.0)
     erubi (1.11.0)
-    fake (1.42.11.0)
+    faker (3.0.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -114,6 +115,8 @@ GEM
       net-protocol
     nio4r (2.5.8)
     nokogiri (1.13.10-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
     pg (1.4.5)
     pry (0.14.1)
@@ -165,13 +168,14 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-darwin-21
 
 DEPENDENCIES
   annotate
   better_errors
   binding_of_caller
   byebug
-  fake
+  faker
   jbuilder
   pg (~> 1.1)
   pry-rails

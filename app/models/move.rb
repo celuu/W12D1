@@ -10,7 +10,7 @@
 class Move < ApplicationRecord
     validates :name, presence: true, uniqueness: { message: "'%{value}' is already in use" }
 
-    belongs_to :poke_move
+    has_many :poke_moves
 
-    has_many :pokemon, through: :poke_move, source: :pokemons
+    has_many :pokemon, through: :poke_moves, source: :pokemons
 end
